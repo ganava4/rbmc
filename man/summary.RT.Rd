@@ -13,6 +13,10 @@
 Summarize the results produced by RT1SAMP and RT2SAMP
 }
 \examples{
+# Example in Manly and Navarro Alberto (2021), Section 1.5
+Dif <- cornheight[,"Cross"] - cornheight[,"Self"]
+corn1s.c <- RT1SAMP(Dif, complete=TRUE) # Complete enumeration
+summary.RT(corn1s.c)
 
 }
 \references{
@@ -21,6 +25,6 @@ Bootstrap and Monte Carlo Methods in Biology. 4th Edition. Chapman and
 Hall/ CRC Press.
 }
 \seealso{
-\code{RT1SAMP}, \code{RT2SAMP}, and the main plotting function
-\code{plot.RT}
+\code{\link[rbmc]{RT1SAMP}}, \code{\link[rbmc]{RT2SAMP}}, and the
+main plotting function \code{\link[rbmc]{plot.RT}}
 }

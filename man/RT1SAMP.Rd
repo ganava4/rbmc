@@ -87,11 +87,10 @@ randomization distribution of mean differences.
 \examples{
 
 # Example in Manly and Navarro Alberto (2021), Section 1.5
-data(cornheight)
 Dif <- cornheight[,"Cross"] - cornheight[,"Self"]
 corn1s.c <- RT1SAMP(Dif, complete=TRUE) # Complete enumerations
 #
-corn1s.s <- RT1SAMP(Dif, CI=TRUE) # Sampled randomization distribution, CI for x - mu.
+corn1s.s <- RT1SAMP(Dif, CI=TRUE) # Sampled distribution, CI for x - mu.
 
 
 }
@@ -101,7 +100,9 @@ Bootstrap and Monte Carlo Methods in Biology. 4th Edition. Chapman and
 Hall/ CRC Press.
 }
 \seealso{
-\code{sampleRD}, \code{count}
+\code{\link[rbmc]{sampleRD}}, \code{\link[rbmc]{count}},
+\code{\link[rbmc]{summary.RT}} and the main plotting function
+\code{\link[rbmc]{plot.RT}}
 }
 \author{
 Jorge Navarro-Alberto

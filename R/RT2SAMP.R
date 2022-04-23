@@ -59,17 +59,17 @@
 #' "Details").
 #' @return The function returns a \code{RT} result object (list)
 #' @author Jorge Navarro-Alberto
-#' @seealso \code{summary.RT} and the main plotting function \code{plot.RT}
+#' @seealso \code{\link[rbmc]{summary.RT}} and the main plotting function
+#' \code{\link[rbmc]{plot.RT}}
 #' @references Manly, B.F.J. and Navarro-Alberto, J.A. (2021) Randomization,
 #' Bootstrap and Monte Carlo Methods in Biology. 4th Edition. Chapman and
 #' Hall/ CRC Press.
 #' @examples
 #'
 #' # Example in Manly and Navarro Alberto (2021), Section 1.1
-#' data(jackals)
 #' male <- jackals$Mand.length[jackals$Sex=="M"]
 #' female <- jackals$Mand.length[jackals$Sex=="F"]
-#' RT2SAMP(male, female, alt="greater")
+#' jackals.RT2 <- RT2SAMP(male, female, alt="greater")
 #' @export RT2SAMP
 RT2SAMP <- function(x, y, NRAND = 4999, alt = "two", CI = FALSE,
                     silent = FALSE, seed = NULL)
